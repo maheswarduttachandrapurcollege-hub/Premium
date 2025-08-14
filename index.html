@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Premium Music Player</title>
+    <link rel="icon" type="image/png" href="https://img.icons8.com/fluency/48/musical-notes.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="https://img.icons8.com/fluency/48/musical-notes.png" alt="Logo" class="logo-icon">
+            Premium Music
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="tab-link active" data-tab="home">Home</a></li>
+            <li><a href="#" class="tab-link" data-tab="feedback">Feedback</a></li>
+            <li><a href="#" class="tab-link" data-tab="about">About Me</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Home Tab -->
+        <section id="home" class="tab-content active">
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search for any song..." />
+                <button onclick="searchSongs()">Search</button>
+            </div>
+            <div id="results" class="results-grid"></div>
+        </section>
+
+        <!-- Feedback Tab -->
+        <section id="feedback" class="tab-content">
+            <h2>Send Us Your Feedback</h2>
+            <form id="feedbackForm">
+                <input type="text" id="name" placeholder="Your Name" required />
+                <input type="email" id="email" placeholder="Your Email" required />
+                <textarea id="message" placeholder="Your Feedback" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <!-- About Me Tab -->
+        <section id="about" class="tab-content">
+            <h2>About Me</h2>
+            <p>Hello! I'm the creator of Premium Music Player. I’m passionate about music and technology, and I built this platform to let you enjoy your favorite songs for free through YouTube integration.</p>
+        </section>
+    </main>
+
+    <!-- Music Box -->
+    <div class="music-box">
+        <div class="song-info">
+            <img id="song-thumbnail" src="" alt="Thumbnail">
+            <div>
+                <h4 id="song-title">No song playing</h4>
+            </div>
+        </div>
+        <div id="player"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
